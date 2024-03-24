@@ -11,6 +11,7 @@
     --fw3: 300;
     --fw5: 500;
     --fw7: 700;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
@@ -22,8 +23,9 @@
 }
 
 h1 {
-    font-size: 1.5em;
+    font-size: 3.5em;
     font-weight: var(--fw7);
+    padding: 20px;
 }
 
 h2 {
@@ -62,14 +64,21 @@ li {
 .main .content {
     width: var(--percent100);
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
 }
 
 .content input {
     margin-bottom: 2em;
+    
+    
 }
 
 .principal{
     gap: 2em;
+    
 }
 
 .main .content .linha {
@@ -82,7 +91,11 @@ li {
     align-items: center;
 }
 
-.main .content .linha .quad {
+.main .content .linha .quad0,
+.main .content .linha .quad1,
+.main .content .linha .quad2,
+.main .content .linha .quad3,
+.main .content .linha .quad4 {
     width: 100px;
     height: 100px;
     background-color: rgb(44, 44, 46);
@@ -91,4 +104,32 @@ li {
     font-size: 4em;
     color: #fff;
     text-align: center;
+}
+.win, .lose  {
+    display: none; /* inicialmente oculto */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2; /* posicionado sobre a tela do jogo */
+}
+/* CSS */
+.win h1, .lose h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+
+.win {
+    background-color: rgba(78, 78, 78, 0.7); /* verde semi-transparente */
+}
+
+.lose {
+    background-color: rgba(128, 0, 0, 0.7); /* vermelho semi-transparente */
 }
