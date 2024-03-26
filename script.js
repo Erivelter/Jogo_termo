@@ -1,7 +1,7 @@
-let linha = 0
-let ListaDePalavras = ["mundo", "vento", "mudar"];
 
-fetch('https://cors-anywhere.herokuapp.com/https://api.dicionario-aberto.net/random/5')
+//irei colocar em algum momento uma api de dicnario para sortear as palavras
+//ignorem esse espaço aqui
+fetch('')
     .then(response => response.json())
     .then(data => {
         let palavras = data.word; // substitua 'word' pelo campo correto na resposta da API
@@ -9,6 +9,9 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.dicionario-aberto.net/ran
         console.log(ListaDePalavras); // imprime a lista atualizada
     })
     .catch(error => console.error('Erro:', error));
+//aqui começa o codigo
+let linha = 0
+let ListaDePalavras = ["mundo", "vento", "mudar"];
 let winScreen = document.querySelector('.win');
 let loseScreen = document.querySelector('.lose');
 const n = Math.floor(Math.random()*ListaDePalavras.length)
